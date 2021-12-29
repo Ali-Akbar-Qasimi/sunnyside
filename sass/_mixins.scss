@@ -1,0 +1,113 @@
+@mixin sectionTop($selector,$readMoreBackground) {
+    .#{$selector}{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+        .#{$selector}-image{
+            img{
+                width: 100%;
+                height: 50vh;
+            }
+        }
+        .#{$selector}-text{
+            width: 100%;
+            flex-grow: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            h1{
+                font-size: 2.7rem;
+                font-family: 'Fraunces', serif;
+                color: $Darkblue;
+            }
+            p{
+                width: 350px;
+                color: $Verydarkgrayishblue;
+            }
+            .#{$selector}-learn-more{
+                color: $Verydarkdesaturatedblue;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-family: 'Fraunces',sans-serif;
+                position: relative;
+                z-index: -1;
+                width: 130px;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 10px;
+                    background-color: $readMoreBackground;
+                    border-radius: 5px;
+                    left: 0;
+                    bottom: 5%;
+                    z-index: -1;
+                }
+            }
+        }        
+    }
+}
+
+@mixin cherryAndOrange($selector,$backgroundImage) {
+    .#{$selector}{
+        height: 100vh;
+        width: 100%;
+        background: $backgroundImage;
+        background-size: 100% 100%;
+        object-fit: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .#{$selector}-text{
+            display: flex;
+            flex-direction: column;
+            height: 40vh;
+            width: 100%;
+            //background-color: red;
+            justify-content: center;
+            gap: 30px;
+            text-align: center;
+            align-items: center;
+            p{
+                width: 350px;
+                color: $Darkblue;
+            }
+            h1{
+                color: $Darkdesaturatedcyan;
+            }
+        }
+    }
+}
+
+@mixin clients($name) {
+    .#{$name}{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        .#{$name}-image{
+            img{
+                border-radius: 100%;
+                width: 70px;
+            }
+        }
+        .#{$name}-text{
+            max-width: 350px;
+            align-content: center;
+            font-size: 18px;
+            color: $Darkblue;
+        }
+        .#{$name}-name{
+            font-size: 1rem;
+            color: $Verydarkdesaturatedblue;
+            font-family: 'Fraunces', serif;
+        }
+        .#{$name}-job{
+            color: $Grayishblue;
+            font-family: 'Manrope',serif;
+        }
+    }
+}

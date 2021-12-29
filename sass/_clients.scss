@@ -1,0 +1,29 @@
+@import '_variable.scss';
+@import '_mixins.scss';
+
+
+.clients{
+    height: fit-content;
+    width: 100%;        
+    .client-header{
+        text-transform: uppercase;
+        color: $Grayishblue;
+        font-family: 'Fraunces', serif;
+        font-size: 1.3rem;
+        padding: 30px;
+        text-align: center;    
+    }
+    .client-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+
+        @include clients(emily);
+        @include clients(thomas);
+        @include clients(jennie);
+        .jennie{
+            padding-bottom: 50px;
+        }
+    }
+}

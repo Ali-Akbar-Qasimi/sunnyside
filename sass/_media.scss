@@ -1,0 +1,109 @@
+
+
+@media (min-width:678px) {   
+    
+    //**************HEADER******************
+    .nav{
+        display: flex;
+        justify-content: space-around;
+        padding: 30px;
+        .menu{
+            display: none;
+        }
+        .nav-links{
+            display: flex;
+            flex-direction: row;
+            position: unset;
+            left: 0;
+            transform: translateX(0);
+            background-color: transparent;
+            justify-content: flex-end;
+        }
+        &.open .nav-links {
+            transform: translateX(0);
+        }
+    }
+    .header{
+        background: url(../images/desktop/image-header.jpg);
+        background-size: 100% 100%;
+
+    }
+
+
+
+    //*******************EGG***********
+
+    .egg{
+        display: flex;
+        flex-direction: row-reverse;
+        height: 50vh;
+        width: 100%;
+        
+        .egg-image{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+        }
+        .egg-text{
+            text-align: start;
+            width: 50%;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 50px;
+            gap: 20px;
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+    //*****************GLASS************
+    .glass{
+        display: flex;
+        flex-direction: row;
+        height: 50vh;
+        width: 100%;
+        .glass-image{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+        }
+        .glass-text{
+            text-align: start;
+            width: 50%;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 50px;
+            gap: 20px;
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+
+
+    //*************cherry&malta************
+
+
+    .cherryAndMalta{
+        display: flex;
+    }
+
+    //*******************CLIENTS***************************
+
+
+    .clients{
+        .client-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    //******************GALLERY****************
+    .gallery{
+        .gallery-images{
+            flex-direction: row;
+        }
+    }
+}

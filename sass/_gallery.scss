@@ -1,0 +1,14 @@
+.gallery{
+    width: 100%;
+    height: fit-content;
+    .gallery-images{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+
+            width: 100%;
+            min-width: 25%;
+        }
+    }
+}
